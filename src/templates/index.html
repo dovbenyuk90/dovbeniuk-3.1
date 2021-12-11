@@ -1,7 +1,25 @@
+{% set title = 'Главная' %}
 {% include 'parts/_head.html' %}
+<main>
 
-{% include 'parts/_header.html' %}
+  <section class="services">
+    <h1>Главная</h1>
+    <h2 class="servises--h">
+      Услуги
+    </h2>
+    {% set lists = ['Обучение', 'Консультация', 'Код ревью'] %}
+    <ul class="services--list list">
+    {% for list in lists %}
+      <li class="list--item">
+        {{ list }}
+      </li>
+    {% endfor %}
+    </ul>
 
+  </section>
+</main>
+{% include 'parts/_footer.html' %}
 
- 
-{% include 'parts/_foot.html' %}
+</body>
+
+</html>
